@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+using NpgsqlTypes;
 
 namespace CondoSed
 {
@@ -30,9 +32,31 @@ namespace CondoSed
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Opcoes opt = new Opcoes();
             opt.ShowDialog();
             this.Dispose();
+        }
+
+        private void TestaConexaoBd_MouseEnter(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void TestaConexaoBd_Click(object sender, EventArgs e)
+        {
+            Conexao connect = new Conexao();
+            connect.EstabeleceConexao();
+        }
+
+        private void TestaConexaoBd_MouseEnter_1(object sender, EventArgs e)
+        {
+            TesteConexaoBdTip.AutoPopDelay = 4000;
+            TesteConexaoBdTip.InitialDelay = 100;
+            TesteConexaoBdTip.ReshowDelay = 200;
+
+            TesteConexaoBdTip.SetToolTip(TestaConexaoBd, "Teste de Conexão com o Banco de Dados");
+
         }
     }
 }

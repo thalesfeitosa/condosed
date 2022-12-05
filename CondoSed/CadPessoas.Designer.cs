@@ -59,13 +59,13 @@
             this.GatoCheckBox = new System.Windows.Forms.CheckBox();
             this.OutroscheckBox = new System.Windows.Forms.CheckBox();
             this.AnimaisEspeciesOutroLabel = new System.Windows.Forms.Label();
-            this.AnimaisEspecieOutrosTextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.QuantosAnimaisTxtBox = new System.Windows.Forms.TextBox();
+            this.QuantosAnimaisLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.VeiculoLabelPlaca2 = new System.Windows.Forms.Label();
             this.VeiculoPlacaTextBox2 = new System.Windows.Forms.TextBox();
             this.VeiculoLabelModelo2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.VeiculoModeloTxtBox2 = new System.Windows.Forms.TextBox();
             this.VeiculoMarcaLabel2 = new System.Windows.Forms.Label();
             this.VeiculoMarcaTextBox2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.VeiculoLabelPlaca3 = new System.Windows.Forms.Label();
             this.VeiculoPlacaTextBox3 = new System.Windows.Forms.TextBox();
             this.VeiculoLabelModelo3 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.VeiculoModeloTxtBox3 = new System.Windows.Forms.TextBox();
             this.VeiculoMarcaLabel3 = new System.Windows.Forms.Label();
             this.VeiculoMarcaTextBox3 = new System.Windows.Forms.TextBox();
             this.MoradoresTxtBox = new System.Windows.Forms.TextBox();
@@ -125,17 +125,23 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.AddVeiculoButtonAddVeiculoButton = new System.Windows.Forms.Button();
+            this.AddVeiculoButton2 = new System.Windows.Forms.Button();
+            this.TelefoneCondominoTxtBox = new System.Windows.Forms.TextBox();
+            this.TelefoneCondominoLabel = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(35, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(162, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 50);
             this.pictureBox1.TabIndex = 0;
@@ -145,7 +151,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(91, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(218, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 50);
             this.pictureBox2.TabIndex = 1;
@@ -154,7 +160,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(148, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(275, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(54, 50);
             this.pictureBox3.TabIndex = 2;
@@ -337,7 +343,7 @@
             // 
             // VeiculoPlacaTextBox
             // 
-            this.VeiculoPlacaTextBox.Location = new System.Drawing.Point(783, 421);
+            this.VeiculoPlacaTextBox.Location = new System.Drawing.Point(763, 421);
             this.VeiculoPlacaTextBox.Name = "VeiculoPlacaTextBox";
             this.VeiculoPlacaTextBox.Size = new System.Drawing.Size(100, 20);
             this.VeiculoPlacaTextBox.TabIndex = 21;
@@ -362,6 +368,7 @@
             this.AnimaisCheckBoxSim.TabIndex = 32;
             this.AnimaisCheckBoxSim.Text = "Sim";
             this.AnimaisCheckBoxSim.UseVisualStyleBackColor = true;
+            this.AnimaisCheckBoxSim.CheckedChanged += new System.EventHandler(this.AnimaisCheckBoxSim_CheckedChanged);
             // 
             // label8
             // 
@@ -429,24 +436,24 @@
             this.AnimaisEspeciesOutroLabel.Text = "Quais:";
             this.AnimaisEspeciesOutroLabel.Visible = false;
             // 
-            // AnimaisEspecieOutrosTextBox
+            // QuantosAnimaisTxtBox
             // 
-            this.AnimaisEspecieOutrosTextBox.Location = new System.Drawing.Point(403, 558);
-            this.AnimaisEspecieOutrosTextBox.Name = "AnimaisEspecieOutrosTextBox";
-            this.AnimaisEspecieOutrosTextBox.Size = new System.Drawing.Size(100, 20);
-            this.AnimaisEspecieOutrosTextBox.TabIndex = 40;
-            this.AnimaisEspecieOutrosTextBox.Visible = false;
+            this.QuantosAnimaisTxtBox.Location = new System.Drawing.Point(403, 558);
+            this.QuantosAnimaisTxtBox.Name = "QuantosAnimaisTxtBox";
+            this.QuantosAnimaisTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.QuantosAnimaisTxtBox.TabIndex = 40;
+            this.QuantosAnimaisTxtBox.Visible = false;
             // 
-            // label10
+            // QuantosAnimaisLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Noto Sans Cond", 9F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(346, 558);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 17);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "Quantos";
-            this.label10.Visible = false;
+            this.QuantosAnimaisLabel.AutoSize = true;
+            this.QuantosAnimaisLabel.Font = new System.Drawing.Font("Noto Sans Cond", 9F, System.Drawing.FontStyle.Bold);
+            this.QuantosAnimaisLabel.Location = new System.Drawing.Point(346, 558);
+            this.QuantosAnimaisLabel.Name = "QuantosAnimaisLabel";
+            this.QuantosAnimaisLabel.Size = new System.Drawing.Size(51, 17);
+            this.QuantosAnimaisLabel.TabIndex = 41;
+            this.QuantosAnimaisLabel.Text = "Quantos";
+            this.QuantosAnimaisLabel.Visible = false;
             // 
             // label9
             // 
@@ -471,7 +478,7 @@
             // 
             // VeiculoPlacaTextBox2
             // 
-            this.VeiculoPlacaTextBox2.Location = new System.Drawing.Point(784, 455);
+            this.VeiculoPlacaTextBox2.Location = new System.Drawing.Point(764, 455);
             this.VeiculoPlacaTextBox2.Name = "VeiculoPlacaTextBox2";
             this.VeiculoPlacaTextBox2.Size = new System.Drawing.Size(100, 20);
             this.VeiculoPlacaTextBox2.TabIndex = 47;
@@ -488,13 +495,13 @@
             this.VeiculoLabelModelo2.Text = "Modelo";
             this.VeiculoLabelModelo2.Visible = false;
             // 
-            // textBox2
+            // VeiculoModeloTxtBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(590, 455);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 45;
-            this.textBox2.Visible = false;
+            this.VeiculoModeloTxtBox2.Location = new System.Drawing.Point(590, 455);
+            this.VeiculoModeloTxtBox2.Name = "VeiculoModeloTxtBox2";
+            this.VeiculoModeloTxtBox2.Size = new System.Drawing.Size(100, 20);
+            this.VeiculoModeloTxtBox2.TabIndex = 45;
+            this.VeiculoModeloTxtBox2.Visible = false;
             // 
             // VeiculoMarcaLabel2
             // 
@@ -624,7 +631,7 @@
             // 
             // VeiculoPlacaTextBox3
             // 
-            this.VeiculoPlacaTextBox3.Location = new System.Drawing.Point(783, 492);
+            this.VeiculoPlacaTextBox3.Location = new System.Drawing.Point(764, 492);
             this.VeiculoPlacaTextBox3.Name = "VeiculoPlacaTextBox3";
             this.VeiculoPlacaTextBox3.Size = new System.Drawing.Size(100, 20);
             this.VeiculoPlacaTextBox3.TabIndex = 61;
@@ -641,13 +648,13 @@
             this.VeiculoLabelModelo3.Text = "Modelo";
             this.VeiculoLabelModelo3.Visible = false;
             // 
-            // textBox9
+            // VeiculoModeloTxtBox3
             // 
-            this.textBox9.Location = new System.Drawing.Point(589, 492);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 59;
-            this.textBox9.Visible = false;
+            this.VeiculoModeloTxtBox3.Location = new System.Drawing.Point(589, 492);
+            this.VeiculoModeloTxtBox3.Name = "VeiculoModeloTxtBox3";
+            this.VeiculoModeloTxtBox3.Size = new System.Drawing.Size(100, 20);
+            this.VeiculoModeloTxtBox3.TabIndex = 59;
+            this.VeiculoModeloTxtBox3.Visible = false;
             // 
             // VeiculoMarcaLabel3
             // 
@@ -891,7 +898,6 @@
             this.label34.Size = new System.Drawing.Size(170, 22);
             this.label34.TabIndex = 90;
             this.label34.Text = "Em Caso de Emergência:";
-            this.label34.Visible = false;
             // 
             // ContaoEmergenciaTxtBox
             // 
@@ -1022,11 +1028,66 @@
             this.pictureBox5.TabIndex = 111;
             this.pictureBox5.TabStop = false;
             // 
+            // AddVeiculoButtonAddVeiculoButton
+            // 
+            this.AddVeiculoButtonAddVeiculoButton.Location = new System.Drawing.Point(866, 419);
+            this.AddVeiculoButtonAddVeiculoButton.Name = "AddVeiculoButtonAddVeiculoButton";
+            this.AddVeiculoButtonAddVeiculoButton.Size = new System.Drawing.Size(20, 23);
+            this.AddVeiculoButtonAddVeiculoButton.TabIndex = 112;
+            this.AddVeiculoButtonAddVeiculoButton.Text = "+";
+            this.AddVeiculoButtonAddVeiculoButton.UseVisualStyleBackColor = true;
+            this.AddVeiculoButtonAddVeiculoButton.Visible = false;
+            this.AddVeiculoButtonAddVeiculoButton.Click += new System.EventHandler(this.AddVeiculoButtonAddVeiculoButton_Click);
+            // 
+            // AddVeiculoButton2
+            // 
+            this.AddVeiculoButton2.Location = new System.Drawing.Point(866, 454);
+            this.AddVeiculoButton2.Name = "AddVeiculoButton2";
+            this.AddVeiculoButton2.Size = new System.Drawing.Size(20, 23);
+            this.AddVeiculoButton2.TabIndex = 113;
+            this.AddVeiculoButton2.Text = "+";
+            this.AddVeiculoButton2.UseVisualStyleBackColor = true;
+            this.AddVeiculoButton2.Visible = false;
+            this.AddVeiculoButton2.Click += new System.EventHandler(this.AddVeiculoButton2_Click);
+            // 
+            // TelefoneCondominoTxtBox
+            // 
+            this.TelefoneCondominoTxtBox.Location = new System.Drawing.Point(589, 169);
+            this.TelefoneCondominoTxtBox.Name = "TelefoneCondominoTxtBox";
+            this.TelefoneCondominoTxtBox.Size = new System.Drawing.Size(258, 20);
+            this.TelefoneCondominoTxtBox.TabIndex = 115;
+            // 
+            // TelefoneCondominoLabel
+            // 
+            this.TelefoneCondominoLabel.AutoSize = true;
+            this.TelefoneCondominoLabel.Font = new System.Drawing.Font("Noto Sans Cond", 12F, System.Drawing.FontStyle.Bold);
+            this.TelefoneCondominoLabel.Location = new System.Drawing.Point(506, 166);
+            this.TelefoneCondominoLabel.Name = "TelefoneCondominoLabel";
+            this.TelefoneCondominoLabel.Size = new System.Drawing.Size(71, 22);
+            this.TelefoneCondominoLabel.TabIndex = 114;
+            this.TelefoneCondominoLabel.Text = "Telefone:";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 49);
+            this.pictureBox6.TabIndex = 116;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // CadPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(916, 745);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.TelefoneCondominoTxtBox);
+            this.Controls.Add(this.TelefoneCondominoLabel);
+            this.Controls.Add(this.AddVeiculoButton2);
+            this.Controls.Add(this.AddVeiculoButtonAddVeiculoButton);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.vScrollBar1);
@@ -1073,7 +1134,7 @@
             this.Controls.Add(this.VeiculoLabelPlaca3);
             this.Controls.Add(this.VeiculoPlacaTextBox3);
             this.Controls.Add(this.VeiculoLabelModelo3);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.VeiculoModeloTxtBox3);
             this.Controls.Add(this.VeiculoMarcaLabel3);
             this.Controls.Add(this.VeiculoMarcaTextBox3);
             this.Controls.Add(this.TipoVeiculoLabel2);
@@ -1087,12 +1148,12 @@
             this.Controls.Add(this.VeiculoLabelPlaca2);
             this.Controls.Add(this.VeiculoPlacaTextBox2);
             this.Controls.Add(this.VeiculoLabelModelo2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.VeiculoModeloTxtBox2);
             this.Controls.Add(this.VeiculoMarcaLabel2);
             this.Controls.Add(this.VeiculoMarcaTextBox2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.AnimaisEspecieOutrosTextBox);
+            this.Controls.Add(this.QuantosAnimaisLabel);
+            this.Controls.Add(this.QuantosAnimaisTxtBox);
             this.Controls.Add(this.AnimaisEspeciesOutroLabel);
             this.Controls.Add(this.OutroscheckBox);
             this.Controls.Add(this.CachorroCheckBox);
@@ -1134,6 +1195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1171,13 +1233,13 @@
         private System.Windows.Forms.CheckBox GatoCheckBox;
         private System.Windows.Forms.CheckBox OutroscheckBox;
         private System.Windows.Forms.Label AnimaisEspeciesOutroLabel;
-        private System.Windows.Forms.TextBox AnimaisEspecieOutrosTextBox;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox QuantosAnimaisTxtBox;
+        private System.Windows.Forms.Label QuantosAnimaisLabel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label VeiculoLabelPlaca2;
         private System.Windows.Forms.TextBox VeiculoPlacaTextBox2;
         private System.Windows.Forms.Label VeiculoLabelModelo2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox VeiculoModeloTxtBox2;
         private System.Windows.Forms.Label VeiculoMarcaLabel2;
         private System.Windows.Forms.TextBox VeiculoMarcaTextBox2;
         private System.Windows.Forms.Label label14;
@@ -1193,7 +1255,7 @@
         private System.Windows.Forms.Label VeiculoLabelPlaca3;
         private System.Windows.Forms.TextBox VeiculoPlacaTextBox3;
         private System.Windows.Forms.Label VeiculoLabelModelo3;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox VeiculoModeloTxtBox3;
         private System.Windows.Forms.Label VeiculoMarcaLabel3;
         private System.Windows.Forms.TextBox VeiculoMarcaTextBox3;
         private System.Windows.Forms.TextBox MoradoresTxtBox;
@@ -1237,5 +1299,10 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button AddVeiculoButtonAddVeiculoButton;
+        private System.Windows.Forms.Button AddVeiculoButton2;
+        private System.Windows.Forms.TextBox TelefoneCondominoTxtBox;
+        private System.Windows.Forms.Label TelefoneCondominoLabel;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
