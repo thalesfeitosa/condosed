@@ -82,6 +82,7 @@
             this.Name = "Selecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selecao";
+            this.Load += new System.EventHandler(this.Selecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TestaConexaoBd)).EndInit();

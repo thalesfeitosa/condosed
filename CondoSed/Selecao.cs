@@ -33,8 +33,8 @@ namespace CondoSed
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Opcoes opt = new Opcoes();
-            opt.ShowDialog();
+            Login Log = new Login();
+            Log.ShowDialog();
             this.Dispose();
         }
 
@@ -45,8 +45,9 @@ namespace CondoSed
 
         private void TestaConexaoBd_Click(object sender, EventArgs e)
         {
-            Conexao connect = new Conexao();
-            connect.EstabeleceConexao();
+            Conexao coonn = new Conexao();
+            coonn.Connectar();
+
         }
 
         private void TestaConexaoBd_MouseEnter_1(object sender, EventArgs e)
@@ -56,6 +57,11 @@ namespace CondoSed
             TesteConexaoBdTip.ReshowDelay = 200;
 
             TesteConexaoBdTip.SetToolTip(TestaConexaoBd, "Teste de Conexão com o Banco de Dados");
+
+        }
+
+        private void Selecao_Load(object sender, EventArgs e)
+        {
 
         }
     }

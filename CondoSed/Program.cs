@@ -16,7 +16,7 @@ namespace CondoSed
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loading());
+            Application.Run(new Selecao());
         }
     }
 }

@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using Npgsql.Internal;
 using NpgsqlTypes;
 
 
@@ -13,33 +16,44 @@ namespace CondoSed
     public class Conexao
     {
 
-        NpgsqlConnection PGcon = new NpgsqlConnection();
+        NpgsqlConnection conn = new NpgsqlConnection();
 
-        static String Servidor = "localhost";
-        static String Bd = "condosed";
-        static String Usuario = "postgres";
-        static String Password = "#abc123#";
-        static String Porta = "5432";
-
-        String Connect = "server" + Servidor + ";" + "Porta" + Porta + ";" + "User" + Usuario + ";" + "Password" + Password + ";" + "Database" + Bd + ";";
-
-        public NpgsqlConnection EstabeleceConexao()
+        //Construtor
+        public Conexao()
         {
-            try
+            conn.ConnectionString = "Server = localhost; Port = 5432; Database = condosed;User id= postgres; Password = #abc123#";
+
+        }
+        //método conectar
+
+        public NpgsqlConnection Connectar()
+        {
+            if (conn.State == ConnectionState.Closed)
             {
-                PGcon.ConnectionString = Connect;
-                PGcon.Open();
-                MessageBox.Show("Conexão Realizada com Sucesso");
+                conn.Open();
+                
             }
-            catch(NpgsqlException e )
-            {
-                MessageBox.Show("Erro ao Conectar ao Banco de Dados!!" + e.ToString());  
-            }
-            return PGcon;
+            return conn;
+
         }
 
+        // método desconectar
 
+        public void desconect()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
 
-
+        }
     }
+
+       
+
+
+
+
+
+    
 }
