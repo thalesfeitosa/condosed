@@ -76,6 +76,7 @@
             // 
             this.SenhaUsuarioText.Location = new System.Drawing.Point(65, 93);
             this.SenhaUsuarioText.Name = "SenhaUsuarioText";
+            this.SenhaUsuarioText.PasswordChar = '☺';
             this.SenhaUsuarioText.Size = new System.Drawing.Size(151, 20);
             this.SenhaUsuarioText.TabIndex = 3;
             // 

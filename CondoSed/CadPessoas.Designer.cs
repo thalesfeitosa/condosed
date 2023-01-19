@@ -110,26 +110,25 @@
             this.MoradoresTxtBox4 = new System.Windows.Forms.TextBox();
             this.MoradoresNomeLabel4 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.ContaoEmergenciaTxtBox = new System.Windows.Forms.TextBox();
             this.ContaoEmergenciaLabel = new System.Windows.Forms.Label();
             this.ParentescoEmergenciaTxtBox = new System.Windows.Forms.TextBox();
             this.ParentescoEmergencialabel = new System.Windows.Forms.Label();
             this.NomeEmergenciaTxtBox = new System.Windows.Forms.TextBox();
             this.NomeEmergenciaLabel = new System.Windows.Forms.Label();
-            this.ContaoEmergenciaTxtBox2 = new System.Windows.Forms.TextBox();
             this.ContaoEmergenciaLabel2 = new System.Windows.Forms.Label();
             this.ParentescoEmergenciaTxtBox2 = new System.Windows.Forms.TextBox();
             this.ParentescoEmergencialabel2 = new System.Windows.Forms.Label();
             this.NomeEmergenciaTxtBox2 = new System.Windows.Forms.TextBox();
             this.NomeEmergenciaLabel2 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.AddVeiculoButtonAddVeiculoButton = new System.Windows.Forms.Button();
             this.AddVeiculoButton2 = new System.Windows.Forms.Button();
-            this.TelefoneCondominoTxtBox = new System.Windows.Forms.TextBox();
             this.TelefoneCondominoLabel = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.TelEmergenciaMTextbox = new System.Windows.Forms.MaskedTextBox();
+            this.TelEmergenciaMTextbox2 = new System.Windows.Forms.MaskedTextBox();
+            this.TelCondominoMTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -899,13 +898,6 @@
             this.label34.TabIndex = 90;
             this.label34.Text = "Em Caso de Emergência:";
             // 
-            // ContaoEmergenciaTxtBox
-            // 
-            this.ContaoEmergenciaTxtBox.Location = new System.Drawing.Point(678, 639);
-            this.ContaoEmergenciaTxtBox.Name = "ContaoEmergenciaTxtBox";
-            this.ContaoEmergenciaTxtBox.Size = new System.Drawing.Size(133, 20);
-            this.ContaoEmergenciaTxtBox.TabIndex = 96;
-            // 
             // ContaoEmergenciaLabel
             // 
             this.ContaoEmergenciaLabel.AutoSize = true;
@@ -949,13 +941,6 @@
             this.NomeEmergenciaLabel.Size = new System.Drawing.Size(50, 22);
             this.NomeEmergenciaLabel.TabIndex = 91;
             this.NomeEmergenciaLabel.Text = "Nome";
-            // 
-            // ContaoEmergenciaTxtBox2
-            // 
-            this.ContaoEmergenciaTxtBox2.Location = new System.Drawing.Point(678, 671);
-            this.ContaoEmergenciaTxtBox2.Name = "ContaoEmergenciaTxtBox2";
-            this.ContaoEmergenciaTxtBox2.Size = new System.Drawing.Size(133, 20);
-            this.ContaoEmergenciaTxtBox2.TabIndex = 102;
             // 
             // ContaoEmergenciaLabel2
             // 
@@ -1001,17 +986,10 @@
             this.NomeEmergenciaLabel2.TabIndex = 97;
             this.NomeEmergenciaLabel2.Text = "Nome";
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(898, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(18, 745);
-            this.vScrollBar1.TabIndex = 109;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(559, 704);
+            this.pictureBox4.Location = new System.Drawing.Point(794, 671);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(131, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1021,12 +999,13 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(752, 704);
+            this.pictureBox5.Location = new System.Drawing.Point(987, 671);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(131, 41);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox5.TabIndex = 111;
             this.pictureBox5.TabStop = false;
+ //retornar          // this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // AddVeiculoButtonAddVeiculoButton
             // 
@@ -1050,13 +1029,6 @@
             this.AddVeiculoButton2.Visible = false;
             this.AddVeiculoButton2.Click += new System.EventHandler(this.AddVeiculoButton2_Click);
             // 
-            // TelefoneCondominoTxtBox
-            // 
-            this.TelefoneCondominoTxtBox.Location = new System.Drawing.Point(589, 169);
-            this.TelefoneCondominoTxtBox.Name = "TelefoneCondominoTxtBox";
-            this.TelefoneCondominoTxtBox.Size = new System.Drawing.Size(258, 20);
-            this.TelefoneCondominoTxtBox.TabIndex = 115;
-            // 
             // TelefoneCondominoLabel
             // 
             this.TelefoneCondominoLabel.AutoSize = true;
@@ -1077,27 +1049,50 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // TelEmergenciaMTextbox
+            // 
+            this.TelEmergenciaMTextbox.Location = new System.Drawing.Point(672, 639);
+            this.TelEmergenciaMTextbox.Mask = "(00)00000-0000";
+            this.TelEmergenciaMTextbox.Name = "TelEmergenciaMTextbox";
+            this.TelEmergenciaMTextbox.Size = new System.Drawing.Size(86, 20);
+            this.TelEmergenciaMTextbox.TabIndex = 117;
+            // 
+            // TelEmergenciaMTextbox2
+            // 
+            this.TelEmergenciaMTextbox2.Location = new System.Drawing.Point(672, 669);
+            this.TelEmergenciaMTextbox2.Mask = "(00)00000-0000";
+            this.TelEmergenciaMTextbox2.Name = "TelEmergenciaMTextbox2";
+            this.TelEmergenciaMTextbox2.Size = new System.Drawing.Size(86, 20);
+            this.TelEmergenciaMTextbox2.TabIndex = 118;
+            // 
+            // TelCondominoMTextBox
+            // 
+            this.TelCondominoMTextBox.Location = new System.Drawing.Point(583, 168);
+            this.TelCondominoMTextBox.Mask = "(00)00000-0000";
+            this.TelCondominoMTextBox.Name = "TelCondominoMTextBox";
+            this.TelCondominoMTextBox.Size = new System.Drawing.Size(89, 20);
+            this.TelCondominoMTextBox.TabIndex = 119;
+            // 
             // CadPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(916, 745);
+            this.ClientSize = new System.Drawing.Size(1199, 745);
+            this.Controls.Add(this.TelCondominoMTextBox);
+            this.Controls.Add(this.TelEmergenciaMTextbox2);
+            this.Controls.Add(this.TelEmergenciaMTextbox);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.TelefoneCondominoTxtBox);
             this.Controls.Add(this.TelefoneCondominoLabel);
             this.Controls.Add(this.AddVeiculoButton2);
             this.Controls.Add(this.AddVeiculoButtonAddVeiculoButton);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.ContaoEmergenciaTxtBox2);
             this.Controls.Add(this.ContaoEmergenciaLabel2);
             this.Controls.Add(this.ParentescoEmergenciaTxtBox2);
             this.Controls.Add(this.ParentescoEmergencialabel2);
             this.Controls.Add(this.NomeEmergenciaTxtBox2);
             this.Controls.Add(this.NomeEmergenciaLabel2);
-            this.Controls.Add(this.ContaoEmergenciaTxtBox);
             this.Controls.Add(this.ContaoEmergenciaLabel);
             this.Controls.Add(this.ParentescoEmergenciaTxtBox);
             this.Controls.Add(this.ParentescoEmergencialabel);
@@ -1189,6 +1184,7 @@
             this.Name = "CadPessoas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Pessoas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CadPessoas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1284,25 +1280,24 @@
         private System.Windows.Forms.TextBox MoradoresTxtBox4;
         private System.Windows.Forms.Label MoradoresNomeLabel4;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox ContaoEmergenciaTxtBox;
         private System.Windows.Forms.Label ContaoEmergenciaLabel;
         private System.Windows.Forms.TextBox ParentescoEmergenciaTxtBox;
         private System.Windows.Forms.Label ParentescoEmergencialabel;
         private System.Windows.Forms.TextBox NomeEmergenciaTxtBox;
         private System.Windows.Forms.Label NomeEmergenciaLabel;
-        private System.Windows.Forms.TextBox ContaoEmergenciaTxtBox2;
         private System.Windows.Forms.Label ContaoEmergenciaLabel2;
         private System.Windows.Forms.TextBox ParentescoEmergenciaTxtBox2;
         private System.Windows.Forms.Label ParentescoEmergencialabel2;
         private System.Windows.Forms.TextBox NomeEmergenciaTxtBox2;
         private System.Windows.Forms.Label NomeEmergenciaLabel2;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button AddVeiculoButtonAddVeiculoButton;
         private System.Windows.Forms.Button AddVeiculoButton2;
-        private System.Windows.Forms.TextBox TelefoneCondominoTxtBox;
         private System.Windows.Forms.Label TelefoneCondominoLabel;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.MaskedTextBox TelEmergenciaMTextbox;
+        private System.Windows.Forms.MaskedTextBox TelEmergenciaMTextbox2;
+        private System.Windows.Forms.MaskedTextBox TelCondominoMTextBox;
     }
 }

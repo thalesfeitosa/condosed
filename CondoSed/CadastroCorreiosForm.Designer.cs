@@ -34,18 +34,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DestNameText = new System.Windows.Forms.TextBox();
+            this.DestBlocoText = new System.Windows.Forms.TextBox();
+            this.CodRastreamentoText = new System.Windows.Forms.TextBox();
+            this.DestAptText = new System.Windows.Forms.TextBox();
+            this.LocalizacaoEstoqueText = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.DestRecebedorText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.RecebedorCondoText = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.StatusCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,40 +98,40 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Localização Fisica:";
             // 
-            // textBox1
+            // DestNameText
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 20);
-            this.textBox1.TabIndex = 5;
+            this.DestNameText.Location = new System.Drawing.Point(123, 64);
+            this.DestNameText.Name = "DestNameText";
+            this.DestNameText.Size = new System.Drawing.Size(282, 20);
+            this.DestNameText.TabIndex = 5;
             // 
-            // textBox2
+            // DestBlocoText
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(67, 20);
-            this.textBox2.TabIndex = 6;
+            this.DestBlocoText.Location = new System.Drawing.Point(123, 95);
+            this.DestBlocoText.Name = "DestBlocoText";
+            this.DestBlocoText.Size = new System.Drawing.Size(67, 20);
+            this.DestBlocoText.TabIndex = 6;
             // 
-            // textBox3
+            // CodRastreamentoText
             // 
-            this.textBox3.Location = new System.Drawing.Point(548, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(282, 20);
-            this.textBox3.TabIndex = 7;
+            this.CodRastreamentoText.Location = new System.Drawing.Point(548, 64);
+            this.CodRastreamentoText.Name = "CodRastreamentoText";
+            this.CodRastreamentoText.Size = new System.Drawing.Size(282, 20);
+            this.CodRastreamentoText.TabIndex = 7;
             // 
-            // textBox4
+            // DestAptText
             // 
-            this.textBox4.Location = new System.Drawing.Point(123, 119);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(67, 20);
-            this.textBox4.TabIndex = 8;
+            this.DestAptText.Location = new System.Drawing.Point(123, 119);
+            this.DestAptText.Name = "DestAptText";
+            this.DestAptText.Size = new System.Drawing.Size(67, 20);
+            this.DestAptText.TabIndex = 8;
             // 
-            // textBox5
+            // LocalizacaoEstoqueText
             // 
-            this.textBox5.Location = new System.Drawing.Point(548, 115);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(282, 20);
-            this.textBox5.TabIndex = 9;
+            this.LocalizacaoEstoqueText.Location = new System.Drawing.Point(548, 115);
+            this.LocalizacaoEstoqueText.Name = "LocalizacaoEstoqueText";
+            this.LocalizacaoEstoqueText.Size = new System.Drawing.Size(282, 20);
+            this.LocalizacaoEstoqueText.TabIndex = 9;
             // 
             // label6
             // 
@@ -142,12 +142,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Recebedor:";
             // 
-            // textBox7
+            // DestRecebedorText
             // 
-            this.textBox7.Location = new System.Drawing.Point(123, 154);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(282, 20);
-            this.textBox7.TabIndex = 13;
+            this.DestRecebedorText.Location = new System.Drawing.Point(123, 154);
+            this.DestRecebedorText.Name = "DestRecebedorText";
+            this.DestRecebedorText.Size = new System.Drawing.Size(282, 20);
+            this.DestRecebedorText.TabIndex = 13;
             // 
             // label7
             // 
@@ -177,6 +177,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(135, 50);
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -188,13 +189,13 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // comboBox1
+            // RecebedorCondoText
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(548, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 17;
+            this.RecebedorCondoText.FormattingEnabled = true;
+            this.RecebedorCondoText.Location = new System.Drawing.Point(548, 152);
+            this.RecebedorCondoText.Name = "RecebedorCondoText";
+            this.RecebedorCondoText.Size = new System.Drawing.Size(121, 21);
+            this.RecebedorCondoText.TabIndex = 17;
             // 
             // label8
             // 
@@ -222,18 +223,18 @@
             this.ClientSize = new System.Drawing.Size(916, 340);
             this.Controls.Add(this.StatusCheckBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.RecebedorCondoText);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.DestRecebedorText);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LocalizacaoEstoqueText);
+            this.Controls.Add(this.DestAptText);
+            this.Controls.Add(this.CodRastreamentoText);
+            this.Controls.Add(this.DestBlocoText);
+            this.Controls.Add(this.DestNameText);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -258,18 +259,18 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox DestNameText;
+        private System.Windows.Forms.TextBox DestBlocoText;
+        private System.Windows.Forms.TextBox CodRastreamentoText;
+        private System.Windows.Forms.TextBox DestAptText;
+        private System.Windows.Forms.TextBox LocalizacaoEstoqueText;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox DestRecebedorText;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox RecebedorCondoText;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox StatusCheckBox;
     }

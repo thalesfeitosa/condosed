@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+using NpgsqlTypes;
 
 namespace CondoSed
 {
@@ -24,8 +26,9 @@ namespace CondoSed
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ContaoEmergenciaTxtBox.Enabled = true;
-            ContaoEmergenciaTxtBox2.Enabled = true;
+            TelEmergenciaMTextbox.Enabled = true;
+            TelEmergenciaMTextbox2.Enabled= true;
+            TelCondominoMTextBox.Enabled = true;
             MoradoresDtNascimentoTxtBox.Enabled = true;
             MoradoresDtNascimentoTxtBox2.Enabled = true;
             MoradoresDtNascimentoTxtBox3.Enabled = true;
@@ -48,8 +51,17 @@ namespace CondoSed
             NomeTextBox.Enabled = true;
             BlocoTextBox.Enabled = true;
             UnidadeTextBox.Enabled = true;
-            TelefoneCondominoLabel.Enabled = true;
-            TelefoneCondominoTxtBox.Enabled = true;
+            ProprietarioBoxNao.Enabled = true;
+            ProprietarioBoxSim.Enabled = true;
+            VeiculoMarcaTextBox.Enabled = true;
+            VeiculoMarcaTextBox2.Enabled= true;
+            VeiculoMarcaTextBox3.Enabled= true;
+            VeiculoPlacaTextBox.Enabled = true;
+            VeiculoPlacaTextBox2.Enabled= true;
+            VeiculoPlacaTextBox3.Enabled= true;
+
+            
+
         }
 
         private void VeiculoLabel_Click(object sender, EventArgs e)
@@ -95,8 +107,6 @@ namespace CondoSed
 
         private void CadPessoas_Load(object sender, EventArgs e)
         {
-            ContaoEmergenciaTxtBox.Enabled = false;
-            ContaoEmergenciaTxtBox2.Enabled = false;
             MoradoresDtNascimentoTxtBox.Enabled = false;
             MoradoresDtNascimentoTxtBox2.Enabled = false;
             MoradoresDtNascimentoTxtBox3.Enabled = false;
@@ -120,7 +130,17 @@ namespace CondoSed
             BlocoTextBox.Enabled = false;
             UnidadeTextBox.Enabled = false;
             TelefoneCondominoLabel.Enabled = false;
-            TelefoneCondominoTxtBox.Enabled = false;
+            TelEmergenciaMTextbox.Enabled = false;
+            TelEmergenciaMTextbox2.Enabled = false;
+            TelCondominoMTextBox.Enabled = false;   
+            ProprietarioBoxSim.Enabled = false;
+            ProprietarioBoxNao.Enabled = false;
+            VeiculoPlacaTextBox3.Enabled = false;
+            VeiculoPlacaTextBox.Enabled= false; 
+            VeiculoPlacaTextBox2.Enabled = false;
+            VeiculoMarcaTextBox.Enabled= false;
+            VeiculoMarcaTextBox2.Enabled= false;    
+            VeiculoMarcaTextBox3.Enabled = false;
             
             
 
@@ -153,6 +173,26 @@ namespace CondoSed
                 AddVeiculoButtonAddVeiculoButton.Visible = false;
                 TipoVeiculoLabel.Visible = false;
                 TipoVeiculoTxtBox.Visible = false;
+                TipoVeiculoLabel2.Visible = false;
+                TipoVeiculoLabel3.Visible= false;
+                VeiculoMarcaTextBox2.Visible = false;
+                VeiculoMarcaTextBox3.Visible = false;
+                VeiculoLabelModelo2.Visible = false;
+                VeiculoLabelModelo3.Visible= false;
+                VeiculoModeloTxtBox2.Visible = false;
+                VeiculoModeloTxtBox3.Visible = false;
+                TipoVeiculoLabel2.Visible= false;
+                TipoVeiculoLabel3.Visible = false;
+                VeiculoLabelPlaca.Visible= false;
+                VeiculoLabelPlaca2.Visible= false;
+                VeiculoLabelPlaca3.Visible= false;
+                VeiculoMarcaLabel2.Visible= false;
+                VeiculoMarcaLabel3.Visible= false;
+                VeiculoLabelPlaca2.Visible = false;
+                VeiculoLabelPlaca3.Visible= false;
+                AddVeiculoButtonAddVeiculoButton.Visible= false;
+                TipoVeiculoTxtBox2.Visible= false;
+                TipoVeiculoTxtBox3.Visible= false;  
                
             }
         }
@@ -225,5 +265,54 @@ namespace CondoSed
               opt.ShowDialog();
                 this.Close();
         }
+
+        /*private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+            CadPessoasClass CPC = new CadPessoasClass(NomeEmergenciaTxtBox.Text, NomeEmergenciaTxtBox2.Text, TelEmergenciaMTextbox.Text, TelEmergenciaMTextbox2.Text, emergencianome2.Text, telefoneemergencia.Text, ProprietarioBoxNao.Checked, ProprietarioBoxSim.Checked, NomeTextBox.Text, BlocoTextBox.Text, UnidadeTextBox.Text, MoradoresTxtBox.Text, MoradoresTxtBox2.Text, MoradoresTxtBox3.Text, MoradoresTxtBox4.Text, ParentescoTxtBox.Text, ParentescoTxtBox2.Text, ParentescoTxtBox3.Text, ParentescoTxtBox4.Text, MoradoresDtNascimentoTxtBox2.Text, MoradoresDtNascimentoTxtBox3.Text, MoradoresDtNascimentoTxtBox4.Text, MoradoresDtNascimentoTxtBox.Text, TelCondominoMTextBox.Text, VagaBoxSim.Checked, VagaBoxNao.Checked, VeiculoPlacaTextBox.Text, VeiculoPlacaTextBox2.Text, VeiculoPlacaTextBox3.Text, VeiculoModeloTextBox.Text, VeiculoModeloTxtBox2.Text, VeiculoModeloTxtBox3.Text, VeiculoMarcaTextBox.Text, VeiculoMarcaTextBox2.Text, VeiculoMarcaTextBox3.Text, AnimaisCheckBoxNao.Checked, AnimaisCheckBoxSim.Checked, QuantosAnimaisTxtBox.Text, ParentescoEmergenciaTxtBox.Text, ParentescoEmergenciaTxtBox2.Text);
+            MessageBox.Show(CPC.mensagem);
+            NomeEmergenciaTxtBox.Text = string.Empty;
+            NomeEmergenciaTxtBox2.Text = string.Empty;
+            TelEmergenciaMTextbox.Text = string.Empty;
+            TelEmergenciaMTextbox2.Text = string.Empty;
+            ProprietarioBoxNao.Checked = false;
+            ProprietarioBoxSim.Checked = false;
+            NomeTextBox.Text = string.Empty;
+            BlocoTextBox.Text = string.Empty;
+            UnidadeTextBox.Text = string.Empty;
+            MoradoresTxtBox.Text = string.Empty;
+            MoradoresTxtBox2.Text = string.Empty;
+            MoradoresTxtBox3.Text = string.Empty;
+            MoradoresTxtBox4.Text = string.Empty;
+            ParentescoTxtBox.Text = string.Empty;
+            ParentescoTxtBox2.Text = string.Empty;
+            ParentescoTxtBox3.Text = string.Empty;
+            ParentescoTxtBox4.Text = string.Empty;
+            MoradoresDtNascimentoTxtBox2.Text = string.Empty;
+            MoradoresDtNascimentoTxtBox3.Text = string.Empty;
+            MoradoresDtNascimentoTxtBox4.Text = string.Empty;
+            MoradoresDtNascimentoTxtBox.Text = string.Empty;
+            TelCondominoMTextBox.Text = string.Empty;
+            VagaBoxSim.Checked = false;
+            VagaBoxNao.Checked = false;
+            VeiculoPlacaTextBox.Text = string.Empty;
+            VeiculoPlacaTextBox2.Text = string.Empty;
+            VeiculoPlacaTextBox3.Text = string.Empty;
+            VeiculoModeloTextBox.Text = string.Empty;
+            VeiculoModeloTxtBox2.Text = string.Empty;
+            VeiculoModeloTxtBox3.Text = string.Empty;
+            VeiculoMarcaTextBox.Text = string.Empty;
+            VeiculoMarcaTextBox2.Text = string.Empty;
+            VeiculoMarcaTextBox3.Text = string.Empty;
+            AnimaisCheckBoxNao.Checked = false;
+            AnimaisCheckBoxSim.Checked = false;
+            QuantosAnimaisTxtBox.Text = string.Empty;
+            ParentescoEmergenciaTxtBox.Text = string.Empty;
+            ParentescoEmergenciaTxtBox2.Text = string.Empty;
+
+            */
+
+        // para voltar a funcionar, não esquecer de voltar com o comentário na linha 1008 do CadPessoas.Desigers.cs
+
+        }
     }
-}

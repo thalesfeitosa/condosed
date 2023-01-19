@@ -167,6 +167,7 @@
     <Compile Include="BuscarUsuarioCadastradoForm.Designer.cs">
       <DependentUpon>BuscarUsuarioCadastradoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarCorreioClass.cs" />
     <Compile Include="CadastrarUserClass.cs" />
     <Compile Include="CadastroCorreiosForm.cs">
       <SubType>Form</SubType>
@@ -180,6 +181,7 @@
     <Compile Include="CadPessoas.Designer.cs">
       <DependentUpon>CadPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadPessoasClass.cs" />
     <Compile Include="CadUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

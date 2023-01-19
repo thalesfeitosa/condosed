@@ -40,5 +40,12 @@ namespace CondoSed
             LocalAchadoBox.Enabled = true;
             EntregueCheckBox.Enabled = true;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Opcoes opc = new Opcoes();
+            opc.ShowDialog();
+        }
     }
 }
