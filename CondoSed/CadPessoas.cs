@@ -312,7 +312,6 @@ namespace CondoSed
 
             */
 
-        // para voltar a funcionar, não esquecer de voltar com o comentário na linha 1008 do CadPessoas.Desigers.cs
 
         }
     }
